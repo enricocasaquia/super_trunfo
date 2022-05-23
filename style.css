@@ -1,0 +1,168 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 854px;
+    background-image: url(img/background.jpg);
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-trunfo {
+    width: 150px;
+    align-self: flex-end;
+}
+
+.logo-mandalorian {
+    width: 800px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 8px 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 200px;
+    background-color: #e6c47d;
+}
+
+button:enabled {
+    color: #000000;
+    font-weight: 700;
+    border: 3px #000000 groove;
+}
+
+button:enabled:hover {
+    color: #4b3232;
+}
+
+h2 {
+    color: #000000;
+    border: 2px #000000 solid;
+    background-color: #e6c47d;
+    width: 1000px;
+}
+
+#carta-jogador, #carta-maquina {
+    width: 360px;
+    height: 500px;
+    overflow: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background-size: 350px 300px;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 10px;
+    border-radius: 33px;
+}
+
+.carta-status {
+    height: 160px;
+    margin: 35px;
+    color: #ffffff;
+    z-index: 2;
+    text-align: left;
+}
+
+.carta-status input {
+    margin: 20px 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.carta-subtitle {
+    z-index: 2;
+    position: absolute;
+    top: 16px;
+    left: 37px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.carta-status p {
+    margin-bottom: 35px;
+}
+
+/*Para dispositivos com tela de menor resolucão*/
+@media screen and (max-width: 900px) {
+    .logo-trunfo {
+        width: 60px;
+    }
+    .logo-mandalorian {
+        width: 300px;
+    }
+    .botoes {
+        flex-direction: row;
+    }
+    button {
+        font-size: 12px;
+        width: 80px;
+        margin: 3px;
+        padding: 1px;
+    }
+
+    h2 {
+        width: 300px;
+        font-size: 16px;
+        align-self: center;
+    }
+
+    #carta-jogador, #carta-maquina {
+        width: 180px;
+        height: 290px;
+        margin-top: 10px;
+        background-size: 170px 150px;
+    }
+
+    .carta-status {
+        font-size: 10px;
+        height: 105px;
+        margin: 10px;
+        margin-left: 20px;
+        line-height: 0px;
+    }
+
+    .carta-status input {
+        margin: 8px 4px;
+    }
+    
+    .carta-status p {
+        margin-top: 12px;
+        margin-left: 8px;
+    }
+
+    .carta-subtitle {
+        top: 7px;
+        left: 20px;
+        line-height: 10px;
+        font-size: 12px;
+    }
+}
